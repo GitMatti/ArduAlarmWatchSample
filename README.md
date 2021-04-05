@@ -4,6 +4,8 @@ Testprojekt zur Abbildung eines einfachen Weckers mit einem Arduino
 
 ![ArduAlarmWatchSample](ArduAlarmWatchSample.png)
 
+Experiment zur einfachen zeitlichen Steuerung von Alarmen auf mehreren Kanälen.
+
 ```cpp
 /// include the library code:
 #include <LiquidCrystal.h>
@@ -217,7 +219,7 @@ const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 
 // AlarmWatch.h
 
-/// Einfacher Wecker mit bis zu 4 Alarmkanälen
+/// Einfacher Wecker mit bis zu 4 Alarmkanälen mit Zeitanzeige
 class AlarmWatch
 {
 private:
@@ -303,6 +305,8 @@ void setup()
 void loop()
 {
   unsigned long relativSeconds = millis() / divisor;
+  // Dieses Verfahren ist wegen des Überlaufs der millis() 
+  // nur für begrenzte Zeiträume verwendbar.
   alarmWatch.Display(relativSeconds);
 }
 
