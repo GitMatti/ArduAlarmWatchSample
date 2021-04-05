@@ -2,6 +2,8 @@
 
 Testprojekt zur Abbildung eines einfachen Weckers mit einem Arduino
 
+![ArduAlarmWatchSample](ArduAlarmWatchSample.png)
+
 ```cpp
 /// include the library code:
 #include <LiquidCrystal.h>
