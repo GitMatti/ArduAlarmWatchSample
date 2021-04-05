@@ -2,7 +2,7 @@
 
 Testprojekt zur Abbildung eines einfachen Weckers mit einem Arduino
 
-```code cpp
+```cpp
 /// include the library code:
 #include <LiquidCrystal.h>
 
